@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from sklearn.metrics import classification_report, recall_score, precision_score, \
     accuracy_score, roc_auc_score, f1_score
@@ -9,7 +10,8 @@ def generate_report(y_true: list, y_pred: list):
 
 
 def confusion_matrix(y_true: list, y_pred: list):
-    table = pd.crosstab(index=y_true, columns=y_pred, rownames=['Observed'], colnames=['Predicted'])
+    table = np.round(pd.crosstab(index=y_true, columns=y_pred,
+                                 rownames=['Observed'], colnames=['Predicted'], normalize='index'), 2)
     return table
 
 

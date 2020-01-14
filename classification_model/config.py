@@ -25,3 +25,4 @@ INTERNATIONAL_PLAN_CATEGORIES = ['Si', 'No']
 VOICE_MAIL_CATEGORIES = ['Si', 'No']
 TARGET = 'target'
 MAP = {1: 'Si', 0: 'No'}
+SEED = 42
